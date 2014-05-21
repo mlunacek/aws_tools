@@ -34,7 +34,8 @@ if __name__ == '__main__':
 	args = get_args(sys.argv[1:])
 
 	if args.u is None:
-		pass
+		for i in range(1,39):
+			copy_directory(i, args.d)
 	else:
 		copy_directory(args.u, args.d)
 
