@@ -70,7 +70,7 @@ if __name__ == '__main__':
 	args = get_args(sys.argv[1:])
 
 	if args.u is None:
-		for i in range(1,19):
+		for i in range(1,39):
 			restart_notebook(i)
 	if args.u == 'molu8455':
 		restart_notebook(args.u)
