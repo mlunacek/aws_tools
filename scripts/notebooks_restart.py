@@ -37,7 +37,7 @@ def nginx(i):
 
 def notebook_config(i):
 	user, node = get_node(i)
-	cmd = 'su {0} -c "python /home/molu8455/notebooks_config.py"'
+	cmd = 'su {0} -c "python /usr/local/aws_tools/scripts/notebooks_config.py"'
 	cmd = cmd.format(user)
 	print cmd
 	pid = subprocess.Popen(cmd, shell=True)
