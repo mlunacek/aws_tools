@@ -1,4 +1,4 @@
-aws tools
+AWS Tools
 =========
 
 Tools for managing ipython notebooks on AWS clusters.
@@ -13,48 +13,49 @@ Tools for managing ipython notebooks on AWS clusters.
 
 - Start the instances.
 
-    starcluster start mycluster
+        starcluster start mycluster
 
 - Configure ssh and create the users.
 
-    starcluster runplugin createusers mycluster
+        starcluster runplugin createusers mycluster
 
 - Modify your .ssh/config file (optional)
 
-    starcluster runplugin sshconfig mycluster
+        starcluster runplugin sshconfig mycluster
 
-    Host aws
-        HostName ec2-54-213-38-30.us-west-2.compute.amazonaws.com
-        IdentityFile ~/.ssh/awswest.pem
-        User molu8455
+    Example .ssh/config file entry.
 
-    Host awsroot
-        HostName ec2-54-213-38-30.us-west-2.compute.amazonaws.com
-        IdentityFile ~/.ssh/awswest.pem
-        User root
+        Host aws
+            HostName ec2-54-213-38-30.us-west-2.compute.amazonaws.com
+            IdentityFile ~/.ssh/awswest.pem
+            User molu8455
+
+        Host awsroot
+            HostName ec2-54-213-38-30.us-west-2.compute.amazonaws.com
+            IdentityFile ~/.ssh/awswest.pem
+            User root
 
 - Start the notebooks, configure passwords, setup nginx.
 
-    starcluster runplugin notebooks mycluster
+        starcluster runplugin notebooks mycluster
 
 - Print a list of links.
 
-    starcluster runplugin links mycluster
+        starcluster runplugin links mycluster
 
+    Example output.
 
-    >>> Running plugin links
+        username: userter
+        url:      https://ec2-54-213-38-30.us-west-2.compute.amazonaws.com
+        password: rcuserter
+        nodename: master
+        web:      http://http://researchcomputing.github.io/csdms_2014/
 
-    username: userter
-    url:      https://ec2-54-213-38-30.us-west-2.compute.amazonaws.com
-    password: rcuserter
-    nodename: master
-    web:      http://http://researchcomputing.github.io/csdms_2014/
-
-    username: user001
-    url:      https://ec2-54-186-237-94.us-west-2.compute.amazonaws.com
-    password: rcuser001
-    nodename: node001
-    web:      http://http://researchcomputing.github.io/csdms_2014/
+        username: user001
+        url:      https://ec2-54-186-237-94.us-west-2.compute.amazonaws.com
+        password: rcuser001
+        nodename: node001
+        web:      http://http://researchcomputing.github.io/csdms_2014/
 
 
 ## Managing the notebooks
