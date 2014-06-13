@@ -48,7 +48,7 @@ def start_notebook(i):
 	#ssh -f  -n {0} "su {1} -c 'cd /home/{1}; ipython notebook > /dev/null'"
 	cmd = 'ssh -f  -n {0} '
 	cmd = cmd + '"su {1} -c'
-	cmd = cmd + '\'cd /home/{1}; ipython notebook >& /dev/null\'"'
+	cmd = cmd + '\'cd /home/{1}; /usr/local/anaconda/bin/ipython notebook >& /dev/null\'"'
 	cmd = cmd.format(node, user)
 	print cmd
 	pid = subprocess.Popen(cmd, shell=True)
